@@ -9,8 +9,8 @@ theme = "my-collect"
 
 [params]
 	preview = ""
-	platform: ""
-	publisher: ""
+	platform = ""
+	publisher =""
 	author = "Logof"
 	info = "Any info about you"
 	
