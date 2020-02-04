@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ if .IsHome }}
+	<h1>Домашняя страница</h1>
+{{ end }}
+{{ if not .IsHome }}
+	<h1>НЕ !!! Домашняя страница</h1>
+{{ end }}
+	<div class="apps-content">
+		(single.html)<br>
+		{{ .Parent }} <hr>
+		
+		<hr>
+		<h2 style="text-align: center">{{.Params.title}}</h2><hr/>
+		{{- .Content -}}
+		<ul class="contents">
+			
+				<li>{{.Title}}           </li>
+          
+          </ul>
+		
+		
+		{{- if not (eq .Site.DisqusShortname "") -}}
+			{{- if isset .Params "enableDisqus" -}}
+				{{- if .Params.enableDisqus -}}
+					{{- template "_internal/disqus.html" . -}}
+				{{- end -}}
+			{{- else -}}
+			{{- if not .Params.full -}}
+				{{- template "_internal/disqus.html" . -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+	</div>
+{{ end }}

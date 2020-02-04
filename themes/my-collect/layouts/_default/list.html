@@ -1,0 +1,23 @@
+{{ define "main" }}
+	{{ if .IsHome }}
+		<h1>Домашняя страница</h1>
+	{{ end }}
+	{{ if not .IsHome }}
+		<div class="apps-list">
+			(list.html)<br>
+			<h1>{{- .Title -}}</h1>
+			{{ range .Pages }}
+				<div class="game-item">
+					<div class="game-icon">
+						<a href="{{ .Permalink }}">
+							<img src="{{ .Params.preview }}" alt="{{- .Title -}}"/>
+						</a>
+					</div>
+					<div class="game-name">
+						<h6><a href="{{ .Permalink }}">{{- .Title -}}</a></h6>
+					</div>
+				</div>
+			{{ end }}
+		</div>
+	{{ end }}
+{{ end }}
