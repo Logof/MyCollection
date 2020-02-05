@@ -1,9 +1,9 @@
-baseURL = "http://localhost:1313"
-languageCode = "en-us"
+baseURL = "http://logof.h1n.ru"
+languageCode = "ru-RU"
 hasCJKLanguage = true
 disqusShortname = ""
 googleAnalytics = ""
-title = "Your site title"
+title = "Blog коллекция"
 copyright = ""
 theme = "my-collect"
 
@@ -13,7 +13,7 @@ theme = "my-collect"
 	publisher =""
 	author = "Logof"
 	info = "Any info about you"
-	
+	pirates = false
 [[params.social]]
   name = "Github"
   weight = 1

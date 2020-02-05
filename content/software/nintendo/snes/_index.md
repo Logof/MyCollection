@@ -1,3 +1,3 @@
 ---
-title: "Игры для приставки Super Nintendo"
+title: "Картриджи для приставки Super Nintendo"
 ---

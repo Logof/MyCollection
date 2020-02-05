@@ -1,3 +1,3 @@
 ---
-title: "Игры для приставки Famicom / NES / Dandy"
+title: "Диски для приставки Sega Dreamcast"
 ---

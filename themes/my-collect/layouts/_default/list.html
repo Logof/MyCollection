@@ -1,6 +1,6 @@
 {{ define "main" }}
 	{{ if .IsHome }}
-		<h1>Домашняя страница</h1>
+		{{ template "partials/index.html" . }}
 	{{ end }}
 	{{ if not .IsHome }}
 		<div class="apps-list">
@@ -8,7 +8,7 @@
 			<h1>{{- .Title -}}</h1>
 			{{ range .Pages }}
 				<div class="game-item">
-					<div class="game-icon">
+					<div class="game-icon {{ if .Params.pirates }} .game-label {{ end }}">
 						<a href="{{ .Permalink }}">
 							<img src="{{ .Params.preview }}" alt="{{- .Title -}}"/>
 						</a>

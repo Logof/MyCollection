@@ -1,3 +1,3 @@
 ---
-title: "Игры для приставки Famicom / NES / Dandy"
+title: "Картриджи для приставки Famicom / NES / Dandy"
 ---

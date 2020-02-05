@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="{{ "./css/bootstrap.min.css" | absURL }}">
 <link rel="stylesheet" href="{{ "./css/font-awesome.min.css" | absURL }}">
 
-<title>CodePen - Bootstrap 3 mega-dropdown menu</title>
+<title>{{ .Site.Title }}</title>
 <script src="{{ "./js/jquery-3.4.1.min.js" | absURL }}"></script>
 <script src="{{ "./js/bootstrap.min.js" | absURL }}"></script>
 <style>
@@ -70,21 +70,54 @@
     }
 	
 	.game-icon {
-		display: inline-block;
 		border: 0.5rem solid white;
 		border-radius: 1.5rem;
 		width: 16rem;
 		height: 12rem;
 		padding-bottom: 0;
 		overflow: hidden;
-		background-color: lightgray; 
+		background-color: lightgray;
+	}
+	
+	.game-icon {
+		position: relative;
+		width: 16rem;
+		height: 12rem;
+		overflow: hidden;
+	}
+
+	.game-label:after {
+		content: 'LIC';
+		background: #C76649;
+		z-index: 800;
+		padding-top: 5px;
+		color: white;
+		font-family: Roboto;
+		letter-spacing: 1px;
+		font-weight: 400;
+		text-transform: none;
+		text-align: center;
+		display: inline-block;
+		width: 100px;
+		font-size: 12px;
+		line-height: 14px;
+		-webkit-transform-origin: center center;
+		-ms-transform-origin: center center;
+		transform-origin: center center;
+		top: 3px;
+		border-bottom: 2px solid #7A3521;
+		right: -38px;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		position: absolute;
 	}
 	
 	.game-icon img {
 		width: 16rem;
 		height: 12rem;
 	}
-  
+	
 	.game-item {
 		display: inline-block;
 		width: 16rem;
@@ -93,6 +126,7 @@
 		margin-right: 1.5rem;
 		margin-bottom: 1.5rem; 
 	}
+	
 	
 	.game-name a, a:hover, a:focus {	
 		color: #000000;
