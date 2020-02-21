@@ -1,0 +1,8 @@
+<p class="h5 text-muted">
+    <span class="oi oi-calendar" title="Дата" aria-hidden="true"> {{.Date.Format "2006-01-02"}}</span>
+    {{ range .Params.tags }}
+        <a style="text-decoration: none;" href="{{ "tags/" | relLangURL }}{{ . | urlize | lower }}">
+            <span class="badge badge-secondary" >{{ . }}</span>
+        </a>
+    {{ end }}
+</p>

@@ -1,11 +1,116 @@
-baseURL = "http://logof.h1n.ru"
-languageCode = "ru-RU"
-hasCJKLanguage = true
+baseURL = "./"
+languageCode = "ru"
+DefaultContentLanguage = "ru"
+enableInlineShortcodes = true
 disqusShortname = ""
 googleAnalytics = ""
 title = "Blog коллекция"
-copyright = ""
+copyright = "All rights reserved. Powered by [Logof](https://vk.com/logof) and based on [Erblog Theme](https://github.com/ertuil/erblog)"
 theme = "my-collect"
+paginate = 3
+
+[[menu.main1]]
+	identifier = "retro_pc"
+	name = "Ретро ПК"
+	url = "/hardware/"
+	weight = 1
+	
+[[menu.main1]]
+	parent = "retro_pc"
+	identifier = "apple"
+	name = "Apple"
+	url = "/hardware/apple"
+	weight = 2
+
+[[menu.main1]]
+	parent = "retro_pc"
+	identifier = "atati"
+	name = "Atari"
+	url = "/hardware/atari"
+	weight = 3
+
+[[menu.main1]]
+	parent = "retro_pc"
+	identifier = "msx"
+	name = "MSX"
+	url = "/hardware/msx"
+	weight = 4
+
+[[menu.main1]]
+	parent = "retro_pc"
+	identifier = "zx"
+	name = "ZX Spectrum"
+	url = "/hardware/zx"
+	weight = 5
+	
+[[menu.main1]]
+	identifier = "consoles"
+	name = "Игровые консоли"
+	url = "/post/"
+	weight = 6
+
+[[menu.main1]]
+	parent = "consoles"
+	identifier = "nintendo"
+	name = "Nintendo"
+	url = "/post/"
+	weight = 7
+
+[[menu.main1]]
+	parent = "consoles"
+	identifier = "microsoft"
+	name = "Microsoft"
+	url = "/post/"
+	weight = 8
+
+[[menu.main1]]
+	parent = "consoles"
+	identifier = "sega"
+	name = "Sega"
+	url = "/post/"
+	weight = 9
+
+[[menu.main1]]
+	parent = "consoles"
+	identifier = "sony"
+	name = "Sony"
+	url = "/post/"
+	weight = 10
+
+[[menu.main]]
+	identifier = "software"
+	name = "Игры"
+	url = "/software/"
+	weight = 11
+
+[[menu.main]]
+	parent = "software"
+	identifier = "sega_games"
+	name = "Sega"
+	url = "/software/sega/"
+	weight = 12
+
+	
+[[menu.main]]
+	identifier = "comics"
+	name = "Комиксы"
+	url = "/comics/"
+	weight = 13
+
+[[menu.main]]
+	parent = "comics"
+	identifier = "the_pirates_of_dark_water"
+	name = "Пираты темной воды"
+	url = "/comics/the_pirates_of_dark_water/"
+	weight = 14
+	
+
+
+
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+	series = "series"
 
 [params]
 	preview = ""
@@ -13,7 +118,7 @@ theme = "my-collect"
 	publisher =""
 	author = "Logof"
 	info = "Any info about you"
-	pirates = false
+	
 [[params.social]]
   name = "Github"
   weight = 1

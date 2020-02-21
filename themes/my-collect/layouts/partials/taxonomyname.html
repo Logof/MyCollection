@@ -1,0 +1,10 @@
+	<div class="col-md-3">
+		{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+			<h3><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a></h3>
+			{{ range $key, $value := $taxonomy }}
+				<a style="text-decoration: none;" href="{{ $taxonomyname | relLangURL }}/{{ $key | urlize | lower }}/">
+					<span class="badge badge-secondary">{{ $key }} ({{ .Count }})</span>
+				</a>
+			{{end}}
+		{{end}}
+	</div>

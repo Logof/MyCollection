@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ partial "subheader" . }}
+<div class="container">
+	<div class="row">{{ with .Pages.ByTitle }}{{ $filtered := where . "Params.hiddenguide" "!=" true }}
+		<div class="col-md-9">{{ $len := len $filtered }}
+			{{ range $i, $article := $filtered }}
+				{{ if eq (mod (add $i 1) 3) 1 }}<div class="row">{{ end }}
+					{{partial "block" .}}
+				{{ if or (eq (mod (add $i 1) 3) 0) (eq $len (add $i 1))}}</div>{{ end }}
+			{{ end }}
+		</div>
+		{{ end }}
+		{{partial "taxonomyname" .}}
+	</div>
+</div>
+{{ end }}

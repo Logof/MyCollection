@@ -1,3 +1,4 @@
----
-title: "Картриджи для приставки Sega Genesis / Sega Mega Drive"
----
++++
+title = "Sega Genesis / Sega Mega Drive"
+preview = "genesis/ico_sega.png"
++++

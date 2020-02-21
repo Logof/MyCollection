@@ -1,3 +1,0 @@
----
-title: "Ecco the Dolphin"
----

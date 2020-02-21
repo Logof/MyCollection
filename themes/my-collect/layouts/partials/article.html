@@ -1,0 +1,15 @@
+	<div class="blog-block" style="background-color:#FFFFFF;margin-top: 10px;">
+		<a href="{{.Permalink}}">
+			<h4 class="my-0 font-weight-normal">{{.Title}}</h4>
+		</a>
+		{{partial "info" .}}
+		<div class="card-body">
+			{{ if isset .Params "description" }}
+				{{ .Description }}
+			{{ else if gt (len .Summary) 150 }}
+				{{ slicestr .Summary 0 150 }}
+			{{else if .Summary}}
+				{{.Summary}}
+			{{end}} ... <a href="{{.Permalink}}"><span style="color:#01AAED">Read More</span></a>
+		</div>
+	</div>

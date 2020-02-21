@@ -1,0 +1,46 @@
+{{ define "main" }}
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$('#readZone' ).sliderPro({
+			width: 488,
+			height: 700,
+			orientation: 'horizontal',
+			loop: false,
+			arrows: true,
+			buttons: true,
+			thumbnailsPosition: 'right',
+			thumbnailPointer: false,
+			thumbnailWidth: 290,
+			autoplay: false,
+			autoScaleLayers: true,
+			breakpoints: {
+				800: {
+					thumbnailsPosition: 'bottom',
+					thumbnailWidth: 100,
+					thumbnailHeight: 270
+				},
+				500: {
+					thumbnailsPosition: 'bottom',
+					thumbnailWidth: 50,
+					thumbnailHeight: 120
+				}
+			}
+		});
+	});
+</script>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="display-4">{{ .Title }} </h2>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row pt-2 slider-pro" id="readZone">
+			{{ .Content }}
+		</div>
+	</div>
+
+{{end}}

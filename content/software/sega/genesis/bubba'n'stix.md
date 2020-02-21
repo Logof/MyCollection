@@ -1,3 +1,0 @@
----
-title: "Bubba'n'Stix"
----

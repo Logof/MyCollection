@@ -1,0 +1,16 @@
+{{ define "main" }}
+	{{ partial "subheader" . }}
+	<div class="container">
+		<div class="row pt-2">
+			<div class="col-md-9">
+				{{ with (.Site.GetPage "section" "post")  }}
+					{{ range (.Paginator 3).Pages }}
+						{{ partial "article" .}}
+					{{end}}
+					{{partial "pager" .}}
+				{{ end }}
+			</div>
+			{{partial "taxonomyname" .}}
+		</div>
+	</div>
+{{end}}

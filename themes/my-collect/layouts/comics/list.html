@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ partial "subheader" . }}
+<div class="container">
+	<div class="row">{{ with .Pages.ByTitle }}{{ $filtered := where . "Params.hiddenguide" "!=" true }}
+		<div class="col-md-9">{{ $len := len . }}{{ range $i, $article := $filtered }}
+			{{ if eq (mod (add $i 1) 3) 1 }}<div class="row">{{ end }}
+				<div class="col-md-4 center-block">
+					<a href="{{ .Permalink }}">
+						<img class="img-thumbnail-50" src = "{{ .Params.preview }}" />
+						<h4>{{ .Title }}</h4>
+					</a>
+				</div>
+			{{ if or (eq (mod (add $i 1) 3) 0) (eq $len (add $i 1))}}</div>{{ end }}
+			{{ end }}
+		</div>
+		{{ end }}
+		{{partial "taxonomyname" .}}
+	</div>
+</div>
+{{ end }}
